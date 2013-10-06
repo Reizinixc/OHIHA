@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => 'Dmg5nYxagsl2iIs9vdcH8NoYQqYROJgZ',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -113,6 +113,9 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+
+    'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+    'Way\Console\GuardLaravelServiceProvider',
 
 	),
 

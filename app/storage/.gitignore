@@ -1,1 +1,4 @@
 services.manifest
+
+# Guard storage files
+guard/*

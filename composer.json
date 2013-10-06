@@ -1,37 +1,53 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
-	"license": "MIT",
-	"require": {
-		"laravel/framework": "4.0.*"
-	},
-	"autoload": {
-		"classmap": [
-			"app/commands",
-			"app/controllers",
-			"app/models",
-			"app/database/migrations",
-			"app/database/seeds",
-			"app/tests/TestCase.php"
-		]
-	},
-	"scripts": {
-		"post-install-cmd": [
-			"php artisan optimize"
-		],
-		"pre-update-cmd": [
-			"php artisan clear-compiled"
-		],
-		"post-update-cmd": [
-			"php artisan optimize"
-		],
-		"post-create-project-cmd": [
-			"php artisan key:generate"
-		]
-	},
-	"config": {
-		"preferred-install": "dist"
-	},
-	"minimum-stability": "dev"
+  "name": "OHIHA/OHIHA",
+  "description": "O Handing in Homework Assistant -- A handing in system for teachers and TAs",
+  "keywords": ["OHIHA", "homework"],
+  "license": "MIT",
+
+  "require": {
+    "php": ">= 5.4",
+
+    "laravel/framework": "4.0.*",
+    "way/database": "dev-master",
+    "rhumsaa/array_column": "1.*"
+  },
+  "require-dev": {
+    "barryvdh/laravel-ide-helper": "1.*",
+    "phpunit/phpunit": "3.7.*",
+    "mockery/mockery": "dev-master",
+    "way/guard-laravel": "dev-master"
+  },
+
+  "autoload": {
+    "classmap": [
+      "app/commands",
+      "app/controllers",
+      "app/models",
+      "app/database/migrations",
+      "app/database/seeds",
+      "app/tests/TestCase.php"
+    ]
+  },
+
+  "scripts": {
+    "post-install-cmd": [
+      "php artisan optimize"
+    ],
+    "pre-update-cmd": [
+      "php artisan clear-compiled"
+    ],
+    "post-update-cmd": [
+      "php artisan ide-helper:generate",
+      "php artisan optimize"
+    ],
+    "post-create-project-cmd": [
+      "php artisan key:generate"
+    ]
+  },
+
+  "config": {
+    "preferred-install": "dist"
+  },
+
+  "minimum-stability": "dev"
 }

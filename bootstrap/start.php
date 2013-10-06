@@ -28,7 +28,7 @@ $app->redirectIfTrailingSlash();
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('your-machine-name'),
+	'local' => array('ohiha.local', 'localhost', 'localhost.com', '127.0.0.1'),
 
 ));
 
